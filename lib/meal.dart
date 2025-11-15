@@ -1,4 +1,4 @@
-enum MealType { mainCourse }
+enum MealType { mainCourse}
 
 class Meal {
   final String name;

@@ -7,8 +7,7 @@ class Dessert extends Meal {
   final DessertType dessertType;
   final bool containsSugar;
 
-  Dessert(String name, double price,
-      {this.dessertType = DessertType.pudding, this.containsSugar = true})
+  Dessert(String name, double price, this.dessertType, this.containsSugar )
       : super(name, price, MealType.mainCourse);
 
   @override
@@ -25,8 +24,7 @@ class Salad extends Meal {
   final SaladType saladType;
   final bool isVegan;
 
-  Salad(String name, double price,
-      {this.saladType = SaladType.greek, this.isVegan = false})
+  Salad(String name, double price, this.saladType, this.isVegan)
       : super(name, price, MealType.mainCourse);
 
   @override
