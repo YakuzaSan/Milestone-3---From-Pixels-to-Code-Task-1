@@ -8,16 +8,15 @@ class Dessert extends Meal {
   final bool containsSugar;
 
   Dessert(String name, double price, this.dessertType, this.containsSugar )
-      : super(name, price, MealType.mainCourse);
+      : super(name, price, MealType.dessert);
 
   @override
   String info() {
-    return "$name – ${price.toStringAsFixed(2)}€ "
-        "(Dessert: ${dessertType.name}, Sugar: ${containsSugar ? "yes" : "no"})";
+    return "${super.info()} (Dessert: ${dessertType.name}, Sugar: ${containsSugar ? "yes" : "no"})";
   }
+
 }
 
-// Optional: Enum für Salads
 enum SaladType { greek, garden, caesar }
 
 class Salad extends Meal {
@@ -25,11 +24,11 @@ class Salad extends Meal {
   final bool isVegan;
 
   Salad(String name, double price, this.saladType, this.isVegan)
-      : super(name, price, MealType.mainCourse);
+      : super(name, price, MealType.salad);
 
   @override
   String info() {
-    return "$name – ${price.toStringAsFixed(2)}€ "
-        "(Salad: ${saladType.name}, Vegan: ${isVegan ? "yes" : "no"})";
+    return "${super.info()} (Salad: ${saladType.name}, Vegan: ${isVegan ? "yes" : "no"})";
   }
+
 }
